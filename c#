@@ -1,14 +1,1 @@
-Point clickLocation = ne point (0,0);
 
-private void btnSetPoint_Click(object sender, EventArgs e)
-{
-  timerPoint.Interval = 5000;
-  timerPoint.Start();
-}
-
-private void timerPoint_Tick(object sender, EventArgs e)
-{
-  clickLocation = Cursor.Positon;
-  this.Text = "autoclicker" + clickLocation.ToString();
-  timerPoint.stop();
-}
